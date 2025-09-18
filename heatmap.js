@@ -4458,12 +4458,12 @@ var series = dataJson.map(surah => {
       var y = surah[letter];
       data.push({ 
         x: letter,
-        y: y // ✅ raw value only, no fillColor
+        y: y 
       });
     }
   }
 
-  // Reverse x-axis data for RTL layout
+  
   data.reverse();
 
   return { name, data };
@@ -4478,13 +4478,13 @@ var options = {
     fontFamily: 'Arial, "Segoe UI", sans-serif',
     toolbar: { show: false }
   },
-  colors: ['#C91C20'], // ✅ single base color for all rows
+  colors: ['#C91C20'], 
   dataLabels: { enabled: false },
   plotOptions: {
     heatmap: {
-      distributed: true, // ✅ Added as requested
-      useFillColorAsGradient: false, // ✅ Respect manual fillColor
-      colorScale: { ranges: [] }     // Disable auto color scale
+      distributed: true, 
+      useFillColorAsGradient: false,
+      colorScale: { ranges: [] }    
     }
   },
   yaxis: {
@@ -4492,7 +4492,7 @@ var options = {
     opposite: true,
     labels: {
       style: {
-        fontSize: '12px',
+        fontSize: '18px',
         fontFamily: 'Arial, "Segoe UI", sans-serif',
         direction: 'rtl'
       }
@@ -4512,5 +4512,6 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
 
 
