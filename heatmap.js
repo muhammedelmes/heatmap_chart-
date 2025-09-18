@@ -4473,7 +4473,7 @@ var options = {
   series: series,
   chart: {
     height: 1900,
-    width: 1000,
+    width: 1500,
     type: "heatmap",
     fontFamily: 'Arial, "Segoe UI", sans-serif',
     toolbar: { show: false }
@@ -4512,3 +4512,4 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
